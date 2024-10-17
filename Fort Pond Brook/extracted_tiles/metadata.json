@@ -1,0 +1,9 @@
+{
+    "format": "png",
+    "name": "DEM",
+    "version": "1.1",
+    "type": "overlay",
+    "minzoom": "4",
+    "maxzoom": "16",
+    "bounds": "-71.4696,42.4483,-71.4321,42.476"
+}
