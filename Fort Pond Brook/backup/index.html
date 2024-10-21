@@ -26,7 +26,7 @@
 <style>
   #dischargeDataLink {
       position: absolute;
-      bottom: 40px;  /* Adjust to place below your map */
+      bottom: 10px;  /* Adjust to place below your map */
       right: 10px;   /* Adjust the right side position */
       background-color: white;
       padding: 5px 10px;
@@ -42,7 +42,7 @@
   
   #DesignReportDataLink {
       position: absolute;
-      bottom: 10px;  /* Adjust to place below your map */
+      bottom: 40px;  /* Adjust to place below your map */
       right: 10px;   /* Adjust the right side position */
       background-color: white;
       padding: 5px 10px;
@@ -75,27 +75,26 @@
   #welcomeBox {
   position: absolute;
   bottom: 40px;
-  left: 90px;
+  left: 130px;
   width: 300px;
   background-color: rgba(255, 255, 255, 0.8);  /* White background with slight transparency */
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);    /* Subtle shadow for a pop-out effect */
   font-family: Arial, sans-serif;
-  
   z-index: 1001;  /* Ensure it's above other elements */
 }
 
 #welcomeBox h2 {
   text-align: center;   /* Center the "Welcome!" title */
-  margin-top: 2 0 3px 2;
+  margin-top: 0 0 5px 0;
   color: #2E3B4E
 }
 
 #welcomeBox p {
   text-align: left;     /* Left-align the rest of the text */
   margin: 0 0 10px 0;   /* Adjust margins to space out paragraphs */
-  font-size: 12px;      /* Optional: adjust font size for readability */
+  font-size: 14px;      /* Optional: adjust font size for readability */
   color: #2E3B4E
 }
 
@@ -107,7 +106,7 @@
         }
         #longProfileContainer {
             position: absolute;
-            left: 90px;
+            left: 130px;
             top: 50px;
             z-index: 1000;
         }
@@ -116,7 +115,7 @@
             z-index: 1001;
         }
         #toggleLongProfile {
-            left: 90px;
+            left: 130px;
             top: 45px;
         }
         #toggleMap {
@@ -127,7 +126,7 @@
    #CreatedByLink {
       position: absolute;
       bottom: 10px;  /* Adjust to place below your map */
-      left: 90px;   /* Adjust the right side position */
+      left: 130px;   /* Adjust the right side position */
       background-color: black;
       padding: 5px 10px;
       border-radius: 4px;
@@ -158,7 +157,7 @@
 </a>
 
 <a id="DesignReportDataLink" href="https://doc.acton-ma.gov/dsweb/Get/Document-73191/2020-07-02%20River%20Street%20Dam%20Removal%20Preliminary%20Design%20Plans.pdf" target="_blank">
-    Dam Removal Design Report
+    60% Design Report
 </a>
 
 <!-- Link to Geology Legend data -->
@@ -1047,7 +1046,7 @@
 
 
 <div id="mapContainer" style="position: relative;">
-    <div id="map" style="width: 400px; height: 300px; position: absolute; top: 25px; right: 5px; z-index: 1000;"></div>
+    <div id="map" style="width: 600px; height: 500px; position: absolute; top: 25px; right: 5px; z-index: 1000;"></div>
 </div>
 
 <script>

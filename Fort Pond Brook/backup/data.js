@@ -3918,10 +3918,10 @@ var APP_DATA = {
           "yaw": -1,
           "pitch": .5,
           "title": "Former Dam Site",
-          "text": "This is where the concrete dam impeded the river"
+          "text": "Concrete Dam, Span = XX, Width = XX"
         }, {
           "yaw": -0.05,
-          "pitch": -.2,
+          "pitch": -.14,
           "title": "Site Visit Info",
           "text": "Date: 10/9/2024"
         }]
