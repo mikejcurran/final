@@ -42,7 +42,12 @@ var APP_DATA = {
           "target": "193-gsab0221"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [{
+          "yaw": 2.5,
+          "pitch": -0.2,
+          "title": "Historic Feature",
+          "text": "This is a historic bridge abutment. The reservoir extended approximately another 300' upstream from here."
+        }]
     },
     {
       "id": "1-gsab0029",
@@ -218,7 +223,12 @@ var APP_DATA = {
           "target": "3-gsab0031"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [{
+          "yaw": -3.35,
+          "pitch": 0.55,
+          "title": "Historic Feature",
+          "text": "Just to the left of this icon is the head of an old pick axe that was revealed when the reservoir drained. Can you see it?"
+        }]
     },
     {
       "id": "5-gsab0033",
@@ -3916,17 +3926,56 @@ var APP_DATA = {
       ],
       "infoHotspots": [{
           "yaw": -1,
-          "pitch": .5,
-          "title": "Former Dam Site",
-          "text": "This is where the concrete dam impeded the river"
+          "pitch": 0.5,
+          "title": "Historic Feature",
+          "text": "This is former site of the dam, where the concrete structure impeded the river"
         }, {
-          "yaw": -0.05,
-          "pitch": -.2,
-          "title": "Site Visit Info",
-          "text": "Date: 10/9/2024"
-        }]
+          "yaw": -0.5,
+          "pitch": -0.2,
+          "title": "Site Info",
+          "text": " This is the former site of the River St. Dam. The mill powered by the dam here created wool blankets that were used by soldiers in the Civil War. The structures were built in 1845, and the mill burned down in 1951. In the restoration process, some of the important historic features of the dam and mill were retained for their cultural value, and the stream was restored to something closer to its historical state for the ecological benefits of an unimpeded river. The photos for this tour were taken on 10/9/2024"
+        }, {
+          "yaw": -1.1,
+          "pitch": -0.05,
+          "title": "Commemorative Feature",
+          "text": "These steel archways commemorate one of the historic buildings from the site. They were erected during the restoration project in the exact location of the building's doorways."
+    }, {
+          "yaw": -1.43,
+          "pitch": -0.15,
+          "title": "Viewing Platform",
+          "text": "This viewing platform was constructed during the restoration effort in the style of the historic mill building that once stood in its place. It offers a view of the entire restoration site and former reservoir."
     },
-    {
+	{
+          "yaw": -0.85,
+          "pitch": -0.02,
+          "title": "Historic Feature",
+          "text": "This pillar, and the portion of wall to its left are original features of the mill building that were connected to the dam. Behind this, the raceway diverted the impeded water through the mill, where it generated power for the factory."
+    },
+	{
+          "yaw": 1.43,
+          "pitch": -0.15,
+          "title": "Historic Feature",
+          "text": "This is where the concrete dam connected to the south bank of the river. This abutment, and the stone wall to its left are original features of the site."
+    },
+	{
+          "yaw": 2.7,
+          "pitch": 0,
+          "title": "Design Element",
+          "text": "This coarse cobble was placed here to protect the bank from erosion. Just up the hill is the Fitchburg Rail Line, owned by the MBTA."
+    },
+	{
+          "yaw": 3,
+          "pitch": -0.15,
+          "title": "Former Reservoir",
+          "text": "Looking upstream here, you can see most of the former reservoir, where impeded water waited to be released through the dam's raceway. The reservoir was only a few feet deep, but submerged all the un-treed area visible here. Click through this way to see more of the former reservoir, and some historic items that were revealed when the water levels receded."
+    },
+	{
+          "yaw": -2.5,
+          "pitch": 0,
+          "title": "Restored Floodplain",
+          "text": "This flat area is the river's floodplain. Floodplains offer excellent soil for native vegetation to grow, prime habitat for wildlife, and offer important ecological services like flood attenuation and groundwater recharge."
+    }]},
+	{
       "id": "89-gsab0117",
       "name": "GSAB0117",
       "levels": [
@@ -4100,7 +4149,18 @@ var APP_DATA = {
           "target": "91-gsab0119"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [{
+          "yaw": 0,
+          "pitch": 0.1,
+          "title": "Historic Element",
+          "text": "These walls in the middle channel were part of the foundation for the historic mill building. The mark the edge of the former building. When the dam was in place, this channel was dry, because the water was directed through the raceway."
+    },
+	{
+          "yaw": -1.43,
+          "pitch": 0,
+          "title": "Design Element",
+          "text": "During restoration, sediment was removed from this area to lower its elevation. Eventually, this paved area will be usable park space, and will slope down towards a reconnected floodplain."
+    }]
     },
     {
       "id": "93-gsab0121",
@@ -4540,7 +4600,12 @@ var APP_DATA = {
           "target": "101-gsab0129"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [{
+          "yaw": 0.35,
+          "pitch": 0.35,
+          "title": "Channel Design Feature",
+          "text": "This deeper pool is part of one of seven designed pool-riffle structures in the channel. Heterogeneity in the topography of the streambed is vital for fish habitat and maintaining natural stream processes like sediment transport."
+    }]
     },
     {
       "id": "103-gsab0131",
@@ -4980,7 +5045,12 @@ var APP_DATA = {
           "target": "111-gsab0139"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [{
+          "yaw": -1.43,
+          "pitch": 0.1,
+          "title": "Historic Element",
+          "text": "This is where the raceway (the channel conveying water for energy production) rejoined the natural channel."
+    }]
     },
     {
       "id": "113-gsab0141",
@@ -5508,7 +5578,12 @@ var APP_DATA = {
           "target": "123-gsab0151"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [{
+          "yaw": -0.4,
+          "pitch": 0.3,
+          "title": "River Feature",
+          "text": "This gravel bar is made of pebble-sized material. As you explore downstream, notice how the size of the sediment is much larger--mostly cobbles and boulders. This is because the dam impeded the movement of finer sediment downstream. Now that the dam is removed, gravel, pebbles, and sand will move through this reach of river again. This is vitally important for fish and invertebrate habitat."
+        }]
     },
     {
       "id": "125-gsab0153",

@@ -185,7 +185,7 @@
 <h2>Welcome!</h2>
   <p>Use your mouse to click and drag around the scene, and click the arrows, the dots on the map, or the scene list on the left to navigate upstream or downstream.</p>
   <p>To toggle layers in the map, or the map itself, use the icons in the top right. Use the link in the upper left of the page to toggle a longitudinal profile of the site (derived from the DEM), and use the links in the lower right to visit relevant sites.</p>
-  <p>Be sure to click on the information icons for descriptions of important features.</p>
+  <p>Be sure to click on the information icons for descriptions of important features. Red links in the maps show locations with information icons.</p>
 </div>	
 
 	
@@ -1127,6 +1127,35 @@ var demLayer = L.tileLayer('https://rivertours.s3.us-east-2.amazonaws.com/extrac
 });
 
 
+// Style configurations for markers
+const markerStyles = {
+  withinfoHotspots: {
+    radius: 8,
+    fillColor: "#ff4466",
+    color: "#ff4466",
+    weight: 2,
+    opacity: 1,
+    fillOpacity: 0.8
+  },
+  withoutinfoHotspots: {
+    radius: 5,
+    fillColor: "#3388ff",
+    color: "#3388ff",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+  }
+};
+
+// Function to check if a scene has hotspots
+function sceneHasinfoHotspots(sceneId) {
+  const scene = findSceneById(sceneId);
+  if (!scene || !scene.data || !scene.data.infoHotspots) {
+    return false;
+  }
+  return scene.data.infoHotspots.length > 0;
+}
+
 // Fetch the GPS data from the JSON file for the markers
 fetch('gps_data.json')
   .then(response => response.json())
@@ -1134,29 +1163,25 @@ fetch('gps_data.json')
     gpsData.forEach((entry, index) => {
       if (entry.GPSLatitude && entry.GPSLongitude) {
         // Create a marker object with lat, lon, title, and sceneId
-        var marker = {
+        const sceneId = `${index}-gsab${(index + 28).toString().padStart(4, '0')}`;
+        const marker = {
           lat: entry.GPSLatitude,
           lon: entry.GPSLongitude,
           title: `Scene ${index + 1}`,
-          // Construct sceneId assuming format like "0-gsab0028"
-          sceneId: `${index}-gsab${(index + 28).toString().padStart(4, '0')}`
+          sceneId: sceneId
         };
 
-        // Add the marker to the map
-        L.circleMarker([marker.lat, marker.lon], {
-          radius: 5,
-          fillColor: "#3388ff",
-          color: "#3388ff",
-          weight: 1,
-          opacity: 1,
-          fillOpacity: 0.8
-        })
-        .addTo(map)
-        .bindPopup(marker.title) // Bind a popup with the marker title
-        .on('click', function() {
-          // Directly switch to the clicked scene
-          switchToScene(marker.sceneId);
-        });
+        // Determine marker style based on hotspots
+        const hasinfoHotspots = sceneHasinfoHotspots(marker.sceneId);
+        const style = hasinfoHotspots ? markerStyles.withinfoHotspots : markerStyles.withoutinfoHotspots;
+
+        // Add the marker to the map with appropriate styling
+        L.circleMarker([marker.lat, marker.lon], style)
+          .addTo(map)
+          .bindPopup(`${marker.title}${hasinfoHotspots ? ' (Has Information Icons)' : ''}`) // Add indicator in popup
+          .on('click', function() {
+            switchToScene(marker.sceneId);
+          });
       }
     });
   })
@@ -1170,18 +1195,11 @@ function switchToScene(sceneId) {
   } else {
     console.error('Scene not found:', sceneId);
   }
-}
-
-
-// Marker style settings for small circle markers
-var markerStyle = {
-  radius: 5,  // Small circle size
-  fillColor: "#3388ff",  // Customize circle fill color
-  color: "#3388ff",  // Customize circle border color
-  weight: 1,
-  opacity: 1,
-  fillOpacity: 0.8
 };
+
+
+
+
 
 var mikes
 var POIs = {
